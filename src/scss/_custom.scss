@@ -1,0 +1,48 @@
+
+
+
+.header ,.footer, .sidebar-brand, .sidebar-toggler,.sidebar-toggler:hover{
+  background-color: #EB9425;
+}
+
+
+.sidebar-nav {
+  background-color: #FFFFFF;
+
+  .nav-group {
+    &.show {
+      .nav-group-toggle {
+        color: #EB9425;
+        font-size: 24px;
+      }
+    }
+  }
+
+  .nav-link {
+    color: #4B4B4B;
+    font-size: 16px;
+    margin-left: 15px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #EB9425; // Main brand color
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    &.active {
+      color: #EB9425;
+      background-color: #FFF4E5; // Soft amber background
+      border-radius: 6px;
+      padding-left: 10px;
+      font-weight: 600;
+    }
+  }
+
+  .nav-group-toggle {
+    color: #EB9425;
+    font-size: 20px;
+    margin-left: -10px;
+    cursor: pointer;
+  }
+}
