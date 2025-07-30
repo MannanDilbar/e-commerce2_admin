@@ -67,9 +67,9 @@ const Orders = () => {
     "CANCELLED": "CANCELLED",
   }
   const changeStatus = async (orderId, newStatus) => {
+    console.log(orderId, newStatus, auth?.accessToken)
     try {
-      const response = await axios.put('/api/v1/orders/'
-        + orderId + '?status=' + newStatus,
+      const response = await axios.put('/api/v1/orders/statuses/'+ orderId + '?status=' + newStatus,
         {
           headers: {
             'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ const Orders = () => {
                                           <div className="flex-grow-1 ms-3">
                                             <CCardTitle>{item.title}</CCardTitle>
                                             <CCardText>
-                                              <span className="text-muted">${item.price.toFixed(2)}</span>
+                                              <span className="text-muted">{item.price.toFixed(2)} EUR</span>
                                               <br />
                                               {getD(item.details)}
                                             </CCardText>
@@ -165,7 +165,7 @@ const Orders = () => {
                                           <div className="flex-grow-1 ms-3">
 
                                             <CCardText>
-                                              ${(item.price * item.quantity).toFixed(2)}
+                                              {(item.price * item.quantity).toFixed(2)} EUR
                                             </CCardText>
                                           </div>
 

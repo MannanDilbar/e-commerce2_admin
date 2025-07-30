@@ -32,7 +32,7 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'SucCategories',
+        name: 'SubCategories',
         to: '/subcategories',
       },
       {
